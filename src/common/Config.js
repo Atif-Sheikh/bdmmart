@@ -231,10 +231,6 @@ export default {
       routeName: "MyOrders",
     },
     {
-      label: "TrackOrder",
-      routeName: "TrackOrder",
-    },
-    {
       label: "Address",
       routeName: "Address",
     },
