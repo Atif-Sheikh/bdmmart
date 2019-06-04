@@ -149,6 +149,18 @@ const UserProfileStack = createStackNavigator(
   }
 );
 
+const OrderStack = createStackNavigator(
+  {
+    MyOrders: { screen: MyOrdersScreen },
+    TrackOrder: { screen: TrackOrderScreen },
+
+  },
+  {
+    headerMode: 'none',
+    initialRouteName: 'MyOrders',
+  }
+);
+
 const LoginStack = createStackNavigator(
   {
     LoginScreen: { screen: LoginScreen },
@@ -237,9 +249,21 @@ const AppNavigator = createBottomTabNavigator(
       },
     },
     ...(Config.HideCartAndCheckout ? {} : {
-      MyOrders: { screen: MyOrdersScreen }
+      MyOrders: {
+        screen: OrderStack,
+        headerMode: 'none',
+        navigationOptions: {
+          tabBarIcon: ({ tintColor }) => (
+            <TabBarIcon
+              orderIcon
+              css={{ width: 18, height: 18 }}
+              icon={Images.IconOrder}
+              tintColor={tintColor}
+            />
+          ),
+        },
+      }
     }),
-    TrackOrder: { screen: TrackOrderScreen },
     NewsScreen: { screen: NewsStack },
     // SettingScreen: { screen: SettingScreen },
     LoginStack: { screen: LoginStack },
@@ -348,9 +372,9 @@ TabViewPagerPan.prototype.render = function render() {
         styles.sheet,
         width
           ? {
-              width: routes.length * width,
-              transform: [{ translateX }],
-            }
+            width: routes.length * width,
+            transform: [{ translateX }],
+          }
           : null,
       ]}
       {...this._panResponder.panHandlers}>

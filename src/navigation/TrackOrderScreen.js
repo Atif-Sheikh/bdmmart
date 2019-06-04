@@ -11,12 +11,14 @@ import { Back, EmptyView } from "./IconNav";
 export default class TrackOrderScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Track Order",
-    headerLeft: Back(navigation),
-    headerRight: EmptyView(),
-
-    headerTintColor: Color.headerTintColor,
-    headerStyle: Styles.Common.toolbar,
-    headerTitleStyle: Styles.Common.headerTitleStyle,
+    tabBarIcon: ({ tintColor }) => (
+      <TabBarIcon
+        orderIcon
+        css={{ width: 18, height: 18 }}
+        icon={Images.IconOrder}
+        tintColor={tintColor}
+      />
+    ),
   });
 
   static propTypes = {
