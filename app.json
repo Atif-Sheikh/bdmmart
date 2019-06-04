@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "mstore",
+    "description": "MStore Pro ",
+    "slug": "mstore",
+    "privacy": "public",
+    "sdkVersion": "31.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icons/app.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf",
+        "mp4"
+      ]
+    },
+    "assetBundlePatterns": [
+      "assets/fonts/*",
+      "assets/images/icons/*",
+      "src/images/*",
+      "src/Expo/vector-icons/fonts//*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.inspireui.mstore"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "version": "3.6.0",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
