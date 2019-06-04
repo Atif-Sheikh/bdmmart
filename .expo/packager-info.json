@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 13844,
-  "expoServerNgrokUrl": "https://ag-fh4.anonymous.firsttask.exp.direct",
-  "packagerNgrokUrl": "https://packager.ag-fh4.anonymous.firsttask.exp.direct",
-  "ngrokPid": 32,
+  "packagerPid": 1194,
+  "expoServerNgrokUrl": "https://ag-fh4.anonymous.bdmmart.exp.direct",
+  "packagerNgrokUrl": "https://packager.ag-fh4.anonymous.bdmmart.exp.direct",
+  "ngrokPid": 1210,
   "webpackServerPort": null
 }

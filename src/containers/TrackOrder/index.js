@@ -32,7 +32,8 @@ export default class TrackOrderScreen extends Component {
     getOrderShipmentDetails = async (orderId) => {
         Keyboard.dismiss();
         this.setState({
-            isLoading: true
+            isLoading: true,
+            orderId
         })
         try {
             let data = await ShipwayInAPI.getOrderShipmentDetails(orderId)
@@ -80,7 +81,8 @@ export default class TrackOrderScreen extends Component {
                     isLoading={isLoading}
                 />
                 <ScrollView>
-                    {order &&
+                    {!isLoading ?
+                        order ?
                         <View style={styles.orderDetailContainer} >
                             <View style={styles.header}>
                                 <Text style={styles.headerText}>
@@ -175,6 +177,12 @@ export default class TrackOrderScreen extends Component {
                             </View>
                             )}
                         </View>
+                        :
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text>No Awb Found.</Text>
+                        </View>
+                        :
+                        null
                     }
                 </ScrollView>
 
