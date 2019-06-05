@@ -3,14 +3,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styles from './styles';
-import { Languages } from "@common";
-import SearchInput from './SearchInput';
 import { View, Text, Keyboard, ScrollView } from 'react-native';
 import ShipwayInAPI from "@services/ShipwayInAPI";
 import moment from 'moment';
 
 export default class TrackOrderScreen extends Component {
-
+    static navigationOptions = () => ({
+        title: "Order Details"
+    });
     static propTypes = {
         navigation: PropTypes.object,
     };

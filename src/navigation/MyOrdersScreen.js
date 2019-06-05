@@ -9,6 +9,7 @@ import { MyOrders } from "@containers";
 export default class MyOrdersScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "My Orders",
+    header: null,
     tabBarIcon: ({ tintColor }) => (
       <TabBarIcon
         orderIcon

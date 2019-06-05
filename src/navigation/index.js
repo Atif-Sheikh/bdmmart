@@ -153,10 +153,8 @@ const OrderStack = createStackNavigator(
   {
     MyOrders: { screen: MyOrdersScreen },
     TrackOrder: { screen: TrackOrderScreen },
-
   },
   {
-    headerMode: 'none',
     initialRouteName: 'MyOrders',
   }
 );
@@ -251,7 +249,6 @@ const AppNavigator = createBottomTabNavigator(
     ...(Config.HideCartAndCheckout ? {} : {
       MyOrders: {
         screen: OrderStack,
-        headerMode: 'none',
         navigationOptions: {
           tabBarIcon: ({ tintColor }) => (
             <TabBarIcon
