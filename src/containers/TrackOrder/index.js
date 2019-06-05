@@ -74,13 +74,16 @@ export default class TrackOrderScreen extends Component {
         const { orderId, order, activities, isLoading } = this.state;
         return (
             <View style={styles.container}>
-                <SearchInput
+                {/* <SearchInput
                     value={orderId}
                     onChangeText={this.onChangeOrderId}
                     onSearch={() => this.getOrderShipmentDetails(orderId)}
                     isLoading={isLoading}
-                />
+                /> */}
                 <ScrollView>
+                    <View>
+                        <Text style={{ textAlign: 'center' }}> Order id: { orderId }</Text>
+                    </View>
                     {!isLoading ?
                         order ?
                         <View style={styles.orderDetailContainer} >
